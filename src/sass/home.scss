@@ -1,0 +1,15 @@
+/*
+ * 规范
+ * 1.元素保证3个样式以内的语义化名称，特殊情况可以4个。分别代表实例样式（例：defaults）、覆盖样式(例：你懂得)、状态样式(例：opened)、特殊样式(例：选择器)。
+ * 2.variables,extend,mixin,sprites
+ * 3.切割Component规则：
+ * 		1）行列为1级标签
+ * 		2）二级嵌套时，SASS书写方式变成结构化 即@at-root {}。
+ * 		3）二级以下如果是栏目的话，即为Component
+ * 		4）Component可以复用的，要提到css.scss文件内。Component内部不需要@at-root {}，内部要写element>class格式。
+ * 		5）Component不可复用的，或仅仅只有一小部分变化的。用覆盖样式解决。
+ */
+@import "variables";
+@import "mixin";
+@import "extend";
+/* -------------------- myStyle end -------------------- */

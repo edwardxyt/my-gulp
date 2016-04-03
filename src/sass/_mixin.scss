@@ -1,0 +1,18 @@
+@mixin marginAuto($top:0, $bottom:0) {
+	margin: $top auto $bottom;
+}
+@mixin yaHei($size:12px, $line-height: 1.5, $weight:normal) {
+	font: $weight #{$size}/#{$line-height} /* Microsoft YaHei , */ simhei;
+}
+@mixin simsun($size:12px, $line-height: 1.5, $weight:normal) {
+	font: $weight #{$size}/#{$line-height} simsun;
+}
+@mixin arial($size:10px, $line-height: 1.4, $weight:normal) {
+	font: $weight #{$size}/#{$line-height} arial;
+}
+@mixin tahoma($size:10px, $line-height: 1.4, $weight:normal) {
+	font: $weight #{$size}/#{$line-height} tahoma;
+}
+@mixin Verdana($size:10px, $line-height: 1.4, $weight:normal) {
+	font: $weight #{$size}/#{$line-height} Verdana;
+}

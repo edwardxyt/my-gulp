@@ -1,0 +1,16 @@
+%main {
+	width:$percent;
+	@include marginAuto(0,20px);
+}
+%float-left {
+	float: left;
+}
+%float-right {
+	float: right;
+}
+%height-inherit{
+	height: 100%;
+}
+%width-inherit{
+	width: 100%;
+}

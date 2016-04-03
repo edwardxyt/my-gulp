@@ -1,0 +1,101 @@
+/*
+ * 规范
+ * 1.元素保证3个样式以内的语义化名称，特殊情况可以4个。分别代表实例样式（例：defaults）、覆盖样式(例：你懂得)、状态样式(例：opened)、特殊样式(例：选择器)。
+ * 2.variables,extend,mixin,sprites
+ * 3.切割Component规则：
+ * 		1）行列为1级标签
+ * 		2）二级嵌套时，SASS书写方式变成结构化 即@at-root {}。
+ * 		3）二级以下如果是栏目的话，即为Component
+ * 		4）Component可以复用的，要提到css.scss文件内。Component内部不需要@at-root {}，内部要写element>class格式。
+ * 		5）Component不可复用的，或仅仅只有一小部分变化的。用覆盖样式解决。
+ */
+@import 'variables';
+@import 'mixin';
+@import 'extend';
+@import '../css/reset.css';
+/*------------------ edward v1.1 for mobile 2015/06/17 ------------------*/
+:root {
+    font-size: 10px;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    $gray_1;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    $gray_1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    $gray_1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    $gray_1;
+}
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+body {
+	font:62.5%/1.5 arial, tahoma, Verdana, Microsoft YaHei, simhei;
+}
+html,body{
+	height: 100%;
+	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+}
+a {
+  color: #333;
+  text-decoration: none;
+  /* &:link {
+  	text-decoration: none;
+  } */
+}
+a:visited {
+  color: #333;
+}
+a:focus {
+  color: #369;
+}
+a:hover {
+  color: #ff1a17;
+}
+a:active {
+  color: #000;
+}
+a:hover, a:focus {
+  text-decoration: underline;
+}
+a>img {
+	vertical-align: middle;
+}
+/* -------------------- reset end -------------------- */
+@font-face {
+  font-family: 'iconfont';
+  src: url('http://at.alicdn.com/t/font_1453861018_1291244.eot'); /* IE9*/
+  src: url('http://at.alicdn.com/t/font_1453861018_1291244.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('http://at.alicdn.com/t/font_1453861018_1291244.woff') format('woff'), /* chrome、firefox */
+  url('http://at.alicdn.com/t/font_1453861018_1291244.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('http://at.alicdn.com/t/font_1453861018_1291244.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+
+.iconfont{
+	font-family:"iconfont";
+	font-size:16px;font-style:normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: 0.2px;
+}
+.legacy-pie-clearfix {
+  *zoom: 1;
+}
+.legacy-pie-clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+/* -------------------- myStyle end -------------------- */
+body {
+	background: $purple_1;
+	color: $yellow;
+}
+/* -------------------- edward end -------------------- */
