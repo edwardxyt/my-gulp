@@ -28,8 +28,16 @@ gulp.task('scripts', function () {
 
 // 样式
 gulp.task('sass', function() {
-  return gulp.src('./src/sass/*.scss')
+/*  return gulp.src('./src/sass/*.scss')
     .pipe(plugins.sass())
+    .pipe(plugins.autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+    }))
+    .pipe(plugins.minifyCss())
+    .pipe(gulp.dest('dist/css'))
+    .pipe(reload({stream: true}));*/
+    return plugins.rubySass('./src/sass/*.scss')
     .pipe(plugins.autoprefixer({
         browsers: ['last 2 versions'],
         cascade: false
@@ -38,6 +46,7 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('dist/css'))
     .pipe(reload({stream: true}));
 });
+
 
 // 图片
 gulp.task('images', function() {
