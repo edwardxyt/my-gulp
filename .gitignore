@@ -28,6 +28,8 @@ node_modules
 jspm_packages
 dist
 gulp-ruby-sass-0
+.sass-cache
+.DS_Store
 
 # Optional npm cache directory
 .npm
