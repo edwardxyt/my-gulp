@@ -14,14 +14,14 @@ gulp.task('scripts', function () {
     return gulp.src('src/scripts/**/*.js')
         .pipe(plugins.jshint())
         //.pipe(plugins.jshint.reporter('default'))
-        .pipe(plugins.babel({
-            presets: ['es2015']
-        }))
+        // .pipe(plugins.babel({
+        //     presets: ['es2015']
+        // }))
         .pipe(plugins.uglify())
-        .pipe(plugins.concat('all.js'))
-        .pipe(plugins.obfuscate())
-        .pipe(plugins.sourcemaps.init())
-        .pipe(plugins.sourcemaps.write('.'))
+        //.pipe(plugins.concat('all.js'))
+        //.pipe(plugins.obfuscate())
+        //.pipe(plugins.sourcemaps.init())
+        //.pipe(plugins.sourcemaps.write('.'))
         .pipe(gulp.dest('dist/scripts'))
         .pipe(reload({stream: true}));
 });
