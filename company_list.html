@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Company-list</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="/dist/scripts/company.js"></script>
+    <script src="/library/icheck/icheck.min.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/library/icheck/red.css">
+    <link rel="stylesheet" href="/dist/css/css.css">
+    <link rel="stylesheet" href="/dist/css/company_list.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="head-top">
+            <a href="#"><img class="logo" src="/dist/images/radar_logo_header.png" alt=""></a>
+            <ul class="head-nav">
+                <li><a href="#">公司</a></li>
+                <li><a href="#">机构</a></li>
+                <li><a href="#">投资事件</a></li>
+                <li><a href="#">分析</a></li>
+            </ul>
+            <div class="head-seach">
+                <i class="iconfont">&#xe601;</i>
+                <input type="text">
+            </div>
+            <div class="btn-group">
+                <a href="#"><img class="img-circle head-portrait " src="/dist/images/user-headPortrait.png" alt=""></a>
+                <button type="button" class="head-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    IT桔子 <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">设置</a></li>
+                    <li><a href="#">设置</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">退出</a></li>
+                </ul>
+            </div>
+            <div class="head-notice">
+                <i class="iconfont">&#xe602;</i>
+                <div class="notice-new"></div>
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+    <div class="company-chart-box">
+        <div class="company-center">
+            <p class="company-chart-tit">企业公司行业轮次分布图<span><em>-</em>收起图表</span></p>
+            <div class="company-chart"></div>
+        </div>
+    </div>
+    <div class="company-list">
+        <h2>公司</h2>
+        <div class="company-filter legacy-pie-clearfix">
+            <div class="company-filter-tag">
+                <span>金融<i class="iconfont">&#xe604;</i></span>
+                <span>贷款<i class="iconfont">&#xe604;</i></span>
+                <span>2015<i class="iconfont">&#xe604;</i></span>
+                <span>北京<i class="iconfont">&#xe604;</i></span>
+            </div>
+            <span class="tag-clear-btn">清除筛选</span>
+            <div class="company-filter-search">
+                <span><i class="iconfont">&#xe601;</i></span>
+                <input type="text" placeholder="关键词">
+            </div>
+            <div class="company-filter-box">
+                <div class="dropdown">
+                    <button type="button" id="dropdownMenu1" data-toggle="dropdown">
+                    行业
+                    <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">行业1</a></li>
+                        <li><a href="#">行业2</a></li>
+                        <li><a href="#">行业3</a></li>
+                        <li><a href="#">行业4</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button type="button" id="dropdownMenu2" data-toggle="dropdown">
+                    子行业
+                    <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li><a href="#">子行业1</a></li>
+                        <li><a href="#">子行业2</a></li>
+                        <li><a href="#">子行业3</a></li>
+                        <li><a href="#">子行业4</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button type="button" id="dropdownMenu3" data-toggle="dropdown">
+                    成立时间
+                    <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                        <li><a href="#">成立时间1</a></li>
+                        <li><a href="#">成立时间2</a></li>
+                        <li><a href="#">成立时间3</a></li>
+                        <li><a href="#">成立时间4</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button type="button" id="dropdownMenu4" data-toggle="dropdown">
+                    地区
+                    <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu4">
+                        <li><a href="#">地区1</a></li>
+                        <li><a href="#">地区2</a></li>
+                        <li><a href="#">地区3</a></li>
+                        <li><a href="#">地区4</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button type="button" id="dropdownMenu5" data-toggle="dropdown">
+                    获投状态
+                    <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu5">
+                        <li><a href="#">获投状态1</a></li>
+                        <li><a href="#">获投状态2</a></li>
+                        <li><a href="#">获投状态3</a></li>
+                        <li><a href="#">获投状态4</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button type="button" id="dropdownMenu6" data-toggle="dropdown">
+                    运营状态
+                    <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu6">
+                        <li><a href="#">运营状态1</a></li>
+                        <li><a href="#">运营状态2</a></li>
+                        <li><a href="#">运营状态3</a></li>
+                        <li><a href="#">运营状态4</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button type="button" id="dropdownMenu7" data-toggle="dropdown">
+                    融资需求
+                    <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu7">
+                        <li><a href="#">融资需求1</a></li>
+                        <li><a href="#">融资需求2</a></li>
+                        <li><a href="#">融资需求3</a></li>
+                        <li><a href="#">融资需求4</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button type="button" id="dropdownMenu8" data-toggle="dropdown">
+                    被认领
+                    <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu8">
+                        <li><a href="#">被认领1</a></li>
+                        <li><a href="#">被认领2</a></li>
+                        <li><a href="#">被认领3</a></li>
+                        <li><a href="#">被认领4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="company-list-box">
+            <div class="company-list-sort">
+                <span>共<b>8634</b>条结果</span>
+                <p>
+                    <span class="active">默认排序</span>
+                    <span>按指数排序</span>
+                    <span>按访问量排序</span>
+                </p>
+            </div>
+            <table class="company-list-table">
+                <tr>
+                    <th><input type="checkbox">公司名称</th>
+                    <th>成立时间</th>
+                    <th>地区</th>
+                    <th>行业</th>
+                    <th>子行业</th>
+                    <th colspan="3">最新融资情况</th>
+                    <th>融资总额</th>
+                    <th>估值</th>
+                    <th>桔子指数</th>
+                    <th>笔记</th>
+                </tr>
+                <tr>
+                    <td><input type="checkbox">okcoinCNY</td>
+                    <td>2015-03-10</td>
+                    <td>北京</td>
+                    <td>医疗健康</td>
+                    <td>医疗信息化</td>
+                    <td>2015-03</td>
+                    <td>Pre-A</td>
+                    <td>2965万人民币</td>
+                    <td>2965万人民币</td>
+                    <td>8千万人民币</td>
+                    <td class="rose">+4.736%</td>
+                    <td><i class="iconfont">&#xe605;</i></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox">okcoinCNY</td>
+                    <td>2015-03-10</td>
+                    <td>北京</td>
+                    <td>医疗健康</td>
+                    <td>医疗信息化</td>
+                    <td>2015-03</td>
+                    <td>Pre-A</td>
+                    <td>2965万人民币</td>
+                    <td>2965万人民币</td>
+                    <td>8千万人民币</td>
+                    <td class="fell">+4.736%</td>
+                    <td><i class="iconfont">&#xe606;</i></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox">okcoinCNY</td>
+                    <td>2015-03-10</td>
+                    <td>北京</td>
+                    <td>医疗健康</td>
+                    <td>医疗信息化</td>
+                    <td>2015-03</td>
+                    <td>Pre-A</td>
+                    <td>2965万人民币</td>
+                    <td>2965万人民币</td>
+                    <td>8千万人民币</td>
+                    <td class="fell">+4.736%</td>
+                    <td><i class="iconfont">&#xe605;</i></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox">okcoinCNY</td>
+                    <td>2015-03-10</td>
+                    <td>北京</td>
+                    <td>医疗健康</td>
+                    <td>医疗信息化</td>
+                    <td>2015-03</td>
+                    <td>Pre-A</td>
+                    <td>2965万人民币</td>
+                    <td>2965万人民币</td>
+                    <td>8千万人民币</td>
+                    <td class="fell">+4.736%</td>
+                    <td><i class="iconfont">&#xe605;</i></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox">okcoinCNY</td>
+                    <td>2015-03-10</td>
+                    <td>北京</td>
+                    <td>医疗健康</td>
+                    <td>医疗信息化</td>
+                    <td>2015-03</td>
+                    <td>Pre-A</td>
+                    <td>2965万人民币</td>
+                    <td>2965万人民币</td>
+                    <td>8千万人民币</td>
+                    <td class="rose">+4.736%</td>
+                    <td><i class="iconfont">&#xe606;</i></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox">okcoinCNY</td>
+                    <td>2015-03-10</td>
+                    <td>北京</td>
+                    <td>医疗健康</td>
+                    <td>医疗信息化</td>
+                    <td>2015-03</td>
+                    <td>Pre-A</td>
+                    <td>2965万人民币</td>
+                    <td>2965万人民币</td>
+                    <td>8千万人民币</td>
+                    <td class="rose">+4.736%</td>
+                    <td><i class="iconfont">&#xe606;</i></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox">okcoinCNY</td>
+                    <td>2015-03-10</td>
+                    <td>北京</td>
+                    <td>医疗健康</td>
+                    <td>医疗信息化</td>
+                    <td>2015-03</td>
+                    <td>Pre-A</td>
+                    <td>2965万人民币</td>
+                    <td>2965万人民币</td>
+                    <td>8千万人民币</td>
+                    <td class="fell">+4.736%</td>
+                    <td><i class="iconfont">&#xe605;</i></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox">okcoinCNY</td>
+                    <td>2015-03-10</td>
+                    <td>北京</td>
+                    <td>医疗健康</td>
+                    <td>医疗信息化</td>
+                    <td>2015-03</td>
+                    <td>Pre-A</td>
+                    <td>2965万人民币</td>
+                    <td>2965万人民币</td>
+                    <td>8千万人民币</td>
+                    <td class="rose">+4.736%</td>
+                    <td><i class="iconfont">&#xe606;</i></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox">okcoinCNY</td>
+                    <td>2015-03-10</td>
+                    <td>北京</td>
+                    <td>医疗健康</td>
+                    <td>医疗信息化</td>
+                    <td>2015-03</td>
+                    <td>Pre-A</td>
+                    <td>2965万人民币</td>
+                    <td>2965万人民币</td>
+                    <td>8千万人民币</td>
+                    <td class="rose">+4.736%</td>
+                    <td><i class="iconfont">&#xe605;</i></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox">okcoinCNY</td>
+                    <td>2015-03-10</td>
+                    <td>北京</td>
+                    <td>医疗健康</td>
+                    <td>医疗信息化</td>
+                    <td>2015-03</td>
+                    <td>Pre-A</td>
+                    <td>2965万人民币</td>
+                    <td>2965万人民币</td>
+                    <td>8千万人民币</td>
+                    <td class="fell">+4.736%</td>
+                    <td><i class="iconfont">&#xe605;</i></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox">okcoinCNY</td>
+                    <td>2015-03-10</td>
+                    <td>北京</td>
+                    <td>医疗健康</td>
+                    <td>医疗信息化</td>
+                    <td>2015-03</td>
+                    <td>Pre-A</td>
+                    <td>2965万人民币</td>
+                    <td>2965万人民币</td>
+                    <td>8千万人民币</td>
+                    <td class="fell">+4.736%</td>
+                    <td><i class="iconfont">&#xe605;</i></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox">okcoinCNY</td>
+                    <td>2015-03-10</td>
+                    <td>北京</td>
+                    <td>医疗健康</td>
+                    <td>医疗信息化</td>
+                    <td>2015-03</td>
+                    <td>Pre-A</td>
+                    <td>2965万人民币</td>
+                    <td>2965万人民币</td>
+                    <td>8千万人民币</td>
+                    <td class="fell">+4.736%</td>
+                    <td><i class="iconfont">&#xe606;</i></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox">okcoinCNY</td>
+                    <td>2015-03-10</td>
+                    <td>北京</td>
+                    <td>医疗健康</td>
+                    <td>医疗信息化</td>
+                    <td>2015-03</td>
+                    <td>Pre-A</td>
+                    <td>2965万人民币</td>
+                    <td>2965万人民币</td>
+                    <td>8千万人民币</td>
+                    <td class="fell">+4.736%</td>
+                    <td><i class="iconfont">&#xe606;</i></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox">okcoinCNY</td>
+                    <td>2015-03-10</td>
+                    <td>北京</td>
+                    <td>医疗健康</td>
+                    <td>医疗信息化</td>
+                    <td>2015-03</td>
+                    <td>Pre-A</td>
+                    <td>2965万人民币</td>
+                    <td>2965万人民币</td>
+                    <td>8千万人民币</td>
+                    <td class="fell">+4.736%</td>
+                    <td><i class="iconfont">&#xe605;</i></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox">okcoinCNY</td>
+                    <td>2015-03-10</td>
+                    <td>北京</td>
+                    <td>医疗健康</td>
+                    <td>医疗信息化</td>
+                    <td>2015-03</td>
+                    <td>Pre-A</td>
+                    <td>2965万人民币</td>
+                    <td>2965万人民币</td>
+                    <td>8千万人民币</td>
+                    <td class="fell">+4.736%</td>
+                    <td><i class="iconfont">&#xe606;</i></td>
+                </tr>
+            </table>
+            <div class="company-list-btn">
+                <button class="album" type="button">加入专辑</button>
+                <button class="trace" type="button">跟踪</button>
+                <button class="compare" type="button">加入对比</button>
+                <button class="excel" type="button">EXCEL</button>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn">&lt;&lt;</button>
+                    <button type="button" class="btn">&lt;</button>
+                    <button type="button" class="btn active">1</button>
+                    <button type="button" class="btn">2</button>
+                    <button type="button" class="btn">3</button>
+                    <button type="button" class="btn">4</button>
+                    <button type="button" class="btn">5</button>
+                    <button type="button" class="btn">6</button>
+                    <button type="button" class="btn">&gt;</button>
+                    <button type="button" class="btn">&gt;&gt;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- company-list end -->
+
+    <div class="footer">
+    </div>
+    <!-- footer end -->
+</body>
+
+</html>

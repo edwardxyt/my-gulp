@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Company-list</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="library/echarts/echarts.min.js"></script>
+    <script src="library/echarts/infographic.js"></script>
+    <script src="/dist/scripts/all.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/dist/css/css.css">
+    <link rel="stylesheet" href="/dist/css/company_content.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="head-top">
+            <a href="#"><img class="logo" src="/dist/images/radar_logo_header.png" alt=""></a>
+            <ul class="head-nav">
+                <li><a href="#">公司</a></li>
+                <li><a href="#">机构</a></li>
+                <li><a href="#">投资事件</a></li>
+                <li><a href="#">分析</a></li>
+            </ul>
+            <div class="head-seach">
+                <i class="iconfont">&#xe601;</i>
+                <input type="text">
+            </div>
+            <div class="btn-group">
+                <a href="#"><img class="img-circle head-portrait " src="/dist/images/user-headPortrait.png" alt=""></a>
+                <button type="button" class="head-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    IT桔子 <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">设置</a></li>
+                    <li><a href="#">设置</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">退出</a></li>
+                </ul>
+            </div>
+            <div class="head-notice">
+                <i class="iconfont">&#xe602;</i>
+                <div class="notice-new"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="company-information">
+        <a href="#"><img class="company-logo img-thumbnail" src="/dist/images/company_logo.jpg" alt=""></a>
+        <div class="company-title">
+            <h2>IT桔子<a class="title-url" href="#">http://itjuzi.com</a><span class="tag-need">需要融资</span><span class="certified">已认证</span></h2>
+            <p class="company-industry"><a href="#">企业服务</a><em>&gt;</em><a href="#">综合企业服务</a></p>
+            <ul class="company-tit-tags">
+                <li>大数据</li>
+                <li>大数据</li>
+                <li>大数据</li>
+                <li>大数据</li>
+                <li>大数据</li>
+            </ul>
+        </div>
+        <p class="menu-but">
+            <a class="btn btn-danger" href="">写笔记</a>
+            <a class="btn btn-info" href="">跟踪</a>
+            <a class="btn btn-success" href="">加入比较</a>
+            <a class="btn btn-warning" href="">导出PDF</a>
+        </p>
+    </div>
+
+
+    <div class="company-menu">
+        <ul class="nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">概览</a></li>
+            <li role="presentation"><a href="#product" aria-controls="product" role="tab" data-toggle="tab">产品</a></li>
+            <li role="presentation"><a href="#financing" aria-controls="financing" role="tab" data-toggle="tab">投融资</a></li>
+            <li role="presentation"><a href="#competition" aria-controls="competition" role="tab" data-toggle="tab">竞品</a></li>
+            <li role="presentation"><a href="#team" aria-controls="team" role="tab" data-toggle="tab">团队</a></li>
+            <li role="presentation"><a href="#followers" aria-controls="followers" role="tab" data-toggle="tab">关注者</a></li>
+        </ul>
+    </div>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">
+            <div class="content-banner">
+                <div class="time-line"></div>
+            </div>
+            <div class="content-main">
+                <div class="content-content">
+                    <p class="cont-Introduction">IT桔子是一个关注TMT领域创业与投资的数据库，致力于用户提供结构化公司数据和商业信息，北京岁月桔子科技有限公司旗下产品。提供最权威的服务和数据。</p>
+                    <ul class="cont-lable">
+                        <li>地点<br><span>北京</span></li>
+                        <li>时间<br><span>3年2个月</span></li>
+                        <li>估值<br><em>1.5亿美元</em></li>
+                    </ul>
+                    <div class="cont-columns">
+                        <h3><b>|</b>公司谱系</h3>
+                        <div class="charts">关系图</div>
+                    </div>
+                    <div class="cont-columns">
+                        <h3><b>|</b>行业趋势</h3>
+                        <table class="table trend">
+                            <thead>
+                                <tr>
+                                    <th colspan="3"></th>
+                                    <th>新增公司</th>
+                                    <th>新增投资</th>
+                                    <th>新增融资金额/月</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>子行业</td>
+                                    <td>企业综合服务</td>
+                                    <td>cheart</td>
+                                    <td>15<em class="rise">(+20%)</em></td>
+                                    <td>2<em class="fall">(-50%)</em></td>
+                                    <td>1200万人民币<em class="fall">(-50%)</em></td>
+                                </tr>
+                                <tr>
+                                    <td>子行业</td>
+                                    <td>企业综合服务</td>
+                                    <td>cheart</td>
+                                    <td>15<em class="rise">(+20%)</em></td>
+                                    <td>2<em class="fall">(-50%)</em></td>
+                                    <td>1200万人民币<em class="fall">(-50%)</em></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="content-side">
+                    
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="product">...2</div>
+        <div role="tabpanel" class="tab-pane" id="financing">...3</div>
+        <div role="tabpanel" class="tab-pane" id="competition">...4</div>
+        <div role="tabpanel" class="tab-pane" id="team">...5</div>
+        <div role="tabpanel" class="tab-pane" id="followers">...6</div>
+    </div>
+
+    <div class="footer">
+    </div>
+</body>
+
+</html>
